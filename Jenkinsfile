@@ -4,7 +4,7 @@ pipeline {
             stage ('Build') { 
                 steps { 
                     script{                        
-                        echo 'Running build phase. ' 
+                        echo 'This is feature branch ' 
                     }
                 }
             }
