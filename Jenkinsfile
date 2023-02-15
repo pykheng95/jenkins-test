@@ -1,3 +1,7 @@
+properties([[$class: 'BuildDiscarderProperty',
+                strategy: [$class: 'LogRotator', numToKeepStr: '10']],
+                pipelineTriggers([[$class: 'GitHubPushTrigger'], pollSCM('H/15 * * * *')]),
+                ])
 pipeline {
     agent any
     stages {
